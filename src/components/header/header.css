@@ -1,0 +1,31 @@
+header {
+    height: 140px;
+    background: gray;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlink{
+    text-decoration: none;
+    color: inherit;
+    margin: 10px;
+    padding: 5px;
+    background-color: darkgrey;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.navlink:hover{
+    background: yellowgreen;
+    color: black;
+}
+
+.navlink__active{
+    background: yellowgreen;
+    color: black;
+}
