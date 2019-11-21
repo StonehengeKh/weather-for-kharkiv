@@ -94,6 +94,7 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -194,12 +195,12 @@
       <option name="presentableId" value="Default" />
       <updated>1574176012799</updated>
       <workItem from="1574176014837" duration="3099000" />
-      <workItem from="1574238249273" duration="26243000" />
+      <workItem from="1574238249273" duration="26486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29342000" />
+    <option name="totallyTimeSpent" value="29585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
