@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 
 import {getItemFromServerDays} from "../../actions/serverWeather";
+import "./kharkivFiveDays.css"
 
 class KharkivFiveDays extends React.Component {
 
@@ -14,17 +15,17 @@ class KharkivFiveDays extends React.Component {
         if (!weatherDatas) return <div>Loading...</div>;
         console.log("weatherDatas", weatherDatas)
         return (
-            <section>
-                <h3>{weatherDatas.city.name}, {weatherDatas.city.country}</h3>
+            <section className="days-block">
+                {weatherDatas.city ? (<h3>{weatherDatas.city.name}, {weatherDatas.city.country}</h3>) : null }
                 <ul>
-                    {weatherDatas.list.map((elem, index) => (
+                    {weatherDatas.list ? (weatherDatas.list.map((elem, index) => (
                         <li key={index}>
-                            <p>{elem.dt_txt}</p>
-                            <p>{elem.main.temp}°C</p>
-                            <p>{elem.weather[0].main}</p> <img src='"http://openweathermap.org/img/w/" + {elem.weather[0].icon} + ".png"' alt={elem.weather[0].description} />
-                            <p>{elem.wind.speed} m/s</p>
+                            {elem ? (<p>Date & time: {elem.dt_txt}</p>) : null}
+                            {elem ? (<p>Temperature: {elem.main.temp}°C</p>) : null}
+                            {elem ? (<p>Sky: {elem.weather[0].main}</p>) : null }
+                            {elem ? (<p>Wind Speed: {elem.wind.speed} m/s</p>) : null}
                         </li>))
-                    }
+                    ) : null}
                 </ul>
             </section>
         )

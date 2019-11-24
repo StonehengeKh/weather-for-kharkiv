@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 
 import {getItemFromServerToday} from "../../actions/serverWeather"
+import "./kharkivToday.css"
 
 class KharkivToday extends React.Component {
 
@@ -14,15 +15,14 @@ class KharkivToday extends React.Component {
         if (!weatherData) return <div>Loading...</div>;
         console.log("weatherData", weatherData);
         return (
-            <section>
-                <h3>
-                    {weatherData.weather[0].main} in {weatherData.name}, {weatherData.sys.country}
-                    <img src={weatherData.weather[0].icon} alt={weatherData.weather[0].description} />
-                </h3>
-                <p>Current: {weatherData.main.temp}°C</p>
-                <p>High: {weatherData.main.temp_max}°C</p>
-                <p>Low: {weatherData.main.temp_min}°C</p>
-                <p>Wind Speed: {weatherData.wind.speed} m/s</p>
+            <section className="day-block">
+                {weatherData.weather ? (<h3>
+                    {weatherData.weather[0].main} in {weatherData.name}, {weatherData.sys.country} today
+                </h3>) : null}
+                {weatherData.main ? (<p>Current: {weatherData.main.temp}°C</p>) : null}
+                {weatherData.main ? (<p>High: {weatherData.main.temp_max}°C</p>) : null}
+                {weatherData.main ? (<p>Low: {weatherData.main.temp_min}°C</p>) : null}
+                {weatherData.wind ? (<p>Wind Speed: {weatherData.wind.speed} m/s</p>) : null}
             </section>
         )
     }

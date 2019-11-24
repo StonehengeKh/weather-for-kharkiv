@@ -1,0 +1,18 @@
+.days-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    background-color: lightgrey;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    width: 40vw;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
